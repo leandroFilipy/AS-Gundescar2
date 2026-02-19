@@ -16,6 +16,12 @@ O código refatorado foi pesadamente reescrito, onde foi usado o framework `Spri
 
 #### Por que o padrão Strategy foi a melhor solução
 
-O Pattern Strategy tornou o código fechado à modificação, mas aberto a extensão, além de ter simplificado muito o entendimento e a manutenção do código.
+- O Pattern Strategy tornou o código fechado à modificação, mas aberto a extensão, além de ter simplificado muito o entendimento e a manutenção do código.
 
-A interface `RegraDeDesconto` permitiu a implementação de descontos diferentes para cada ano, evitando modificações em código legado.
+- A interface `RegraDeDesconto` permitiu a implementação de descontos diferentes para cada ano, evitando modificações em código legado.
+
+A `CalculadoraDeDesconto` recebe todas as dependencias de ano necessárias, graças ao `@Autowired` do SpringBoot, que percebe cada componente de ano e injeta automaticamente dentro da calculadora. 
+
+### Conclusão
+
+O código legado era feio e não respeitava o SOLID, com as modificações, o código ficou mais limpo, otimizado e fácil de manter.
